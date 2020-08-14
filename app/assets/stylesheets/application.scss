@@ -11,11 +11,22 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "cocktails";
 
-
-a {
-    text-decoration: none;
+.navbar a {
+  color: white;
+  text-decoration: none;
   &:hover {
     text-decoration: none;
+    color: #E1E1E1;
+  }
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: black;
   }
 }

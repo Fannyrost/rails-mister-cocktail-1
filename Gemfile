@@ -35,6 +35,7 @@ gem 'simple_form'
 gem 'faker'
 
 gem 'awesome_print'
+gem 'cloudinary', '~> 1.12.0'
 gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do

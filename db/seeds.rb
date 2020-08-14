@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'open-uri'
+Cocktail.destroy_all
 Ingredient.destroy_all
 puts "ingredients creation"
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
@@ -16,9 +17,4 @@ drinks = data["drinks"]
 drinks.each do |drink|
   a = drink["strIngredient1"]
   Ingredient.create!(name: a)
-end
-puts "ingredient creation done ! I start the cocktails"
-cocktails = ("odkeau, Bloody Mary, Russe blanc, Octobre rouge, Russe noir, Screwdriver, Trou noir, Chien enragé, PPP, Sex on the beach, Blue Lagoon, Cosmopolitan").split(",")
-cocktails.each do |cocktail|
-  Cocktail.create(name: cocktail)
 end

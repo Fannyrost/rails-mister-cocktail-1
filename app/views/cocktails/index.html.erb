@@ -3,17 +3,14 @@
     <% @cocktails.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail) do %>
         <div>
-          <div class="card">
-            <!-- <img src="..." class="card-img-top" alt="..."> -->
-            <div class="card-body">
-              <h5 class="card-title"><%= cocktail.name %></h5>
-            </div>
+          <div class="card card-width">
+            <%= cl_image_tag cocktail.photo.key, height: 350, crop: :fill %>
+            <h5 class="card-title text-center"><%= cocktail.name %></h5>
           </div>
         </div>
       <% end %>
     <% end %>
   </div>
-
-  <%= link_to 'New cocktail', new_cocktail_path %>
+  <%= link_to 'New cocktail', new_cocktail_path, class: "btn btn-success" %>
 
 </div>
