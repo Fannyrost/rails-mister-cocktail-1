@@ -1,0 +1,19 @@
+<h1>Cocktails List !</h1>
+
+<div class="row row-cols-1 row-cols-md-3">
+  <% @cocktails.each do |cocktail| %>
+  <div class="col-xs-12 col-sm-6 col-lg-4">
+    <div class="card h-100">
+      <!-- <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title"><%= cocktail.name %></h5>
+        <p class="card-text">cocktail.ingredient.name</p>
+      </div>
+      <a href=<%= "http://localhost:3000/cocktails/#{cocktail.id}"%>>
+      <div class="card-link"></div></a>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<%= link_to 'New cocktail', new_cocktail_path %>

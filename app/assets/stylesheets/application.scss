@@ -11,3 +11,18 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+a {
+    text-decoration: none;
+}
+
+.card-link {
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    width: calc(100% - 30px);
+    z-index: 2;
+    background: black;
+    opacity: 0;
+}
